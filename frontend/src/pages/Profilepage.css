@@ -1,0 +1,142 @@
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .profile-page__picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-page__user-info {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 40%;
+    gap: 20px;
+    top: 60px;
+  }
+  
+  .profile-page__header {
+    display: flex;
+  }
+  
+  /* Navigation buttons container */
+  .profile-page__nav-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* General button styling */
+  .profile-page__nav-btn {
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Individual button colors */
+  .profile-page__nav-btn--create {
+    background-color: rgb(73, 73, 71);
+  }
+  
+  .profile-page__nav-btn--coins {
+    background-color: rgb(73, 73, 71);
+  }
+  
+  .profile-page__nav-btn--reach {
+    background-color: rgb(73, 73, 71);
+  }
+  
+  .profile-page__nav-btn--course {
+    background-color: rgb(73, 73, 71);
+  }
+  
+  /* Hover effects */
+  .profile-page__nav-btn--create:hover {
+    background-color: rgb(199, 200, 199);
+  }
+  
+  .profile-page__nav-btn--coins:hover {
+    background-color: rgb(199, 200, 199);
+  }
+  
+  .profile-page__nav-btn--reach:hover {
+    background-color: rgb(199, 200, 199);
+  }
+  
+  .profile-page__nav-btn--course:hover {
+    background-color: rgb(199, 200, 199);
+  }
+  
+  /* Links inside buttons */
+  .profile-page__nav-btn a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .profile-page__bio-text {
+    display: inline;
+    justify-content: space-evenly;
+    padding: 0px 30px;
+    position: relative;
+    top: -150px;
+  }
+  
+  .profile-page__upload-btn {
+    border: none;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    background: transparent;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .profile-page__upload-btn:hover{
+    background-color: #121214;
+    transform: scale(1.1);
+  }
+  
+  .profile-page__bio-btn {
+    border: none;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    background: transparent;
+    color: white;
+    margin-top: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  .profile-page__bio-btn:hover{
+    background-color: #121214;
+    transform: scale(1.1);
+  }
+  
+  .profile-page__bio-textarea {
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+  }

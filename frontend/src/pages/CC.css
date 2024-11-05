@@ -1,0 +1,153 @@
+.container {
+    margin: 0;
+    height: 100vh;
+    padding: 20px;
+    background-image: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%); /* Purple gradient */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    background-color: rgb(24, 24, 31); /* Background color */
+    width: 10%; /* Set a specific width */
+    height: 10%; /* Set a specific height */
+    text-align: center; /* Center text */
+    border-radius: 40px; /* Rounded corners */
+    margin: 0 auto 20px; /* Center horizontally and add margin below */
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding for better spacing inside the score */
+}
+
+
+.main {
+    width: 60vw;
+    height: 35vh;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.main.expanded{
+    height: 65vh;
+}
+
+.question {
+    height: 12vh;
+    background-color: #fa8f15; /* Material-style orange background */
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.question h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.response {
+    flex: 1; /* Makes the response area flexible */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+.response.expanded{
+    margin-top: 20px;
+}
+
+.response textarea {
+    width: 100%;
+    height: 15vh;
+    font-weight: bolder;
+    color: black;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: none;
+    padding: 15px;
+    color: #333;
+    font-size: 1.25rem;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.response textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+.btn-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.btn-1 button {
+    padding: 12px 24px;
+    background-color: #0cb13b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-1 button:hover {
+    background-color: #0ac63f;
+    transform: translateY(-3px);
+}
+
+#next {
+    background-color: #868585e3;
+}
+
+#next:hover{
+    background-color: rgb(151, 151, 151);
+}
+
+.ansP {
+    margin: 20px;
+}
+
+.answer {
+    width: 100%;
+    height: 20vh;
+    margin-top: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.answer p {
+    font-weight: bold;
+    color: inherit;
+}

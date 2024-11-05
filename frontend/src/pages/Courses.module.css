@@ -1,0 +1,345 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+}
+
+.wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+}
+
+.coursesSection {
+  flex: 1;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #e1e4e9;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: #b4b5b6;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .coursesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.courseCard {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.courseCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.courseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.courseCard:hover .courseImage {
+  transform: scale(1.05);
+}
+
+.courseContent {
+  padding: 1.5rem;
+}
+
+.courseName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.courseDescription {
+  color: #000000;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.courseMetadata {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  color: #505051;
+  font-size: 0.875rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  width: 1rem;
+  height: 1rem;
+}
+
+.starFilled {
+  color: #fbbf24;
+  fill: currentColor;
+}
+
+.starEmpty {
+  color: #d1d5db;
+}
+
+.ratingValue {
+  margin-left: 0.5rem;
+  color: #2f3238;
+  font-size: 0.875rem;
+}
+
+.courseFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.oldPrice {
+  color: #f14646;
+  text-decoration: line-through;
+  font-size: 0.875rem;
+}
+
+.newPrice {
+  color: #059669;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.addToCartButton {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.addToCartButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-20%);
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 24rem;
+  background-color: white;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cartVisible {
+  transform: translateX(0);
+}
+
+.cartContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cartTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.closeCart {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+
+.closeCart:hover {
+  background-color: #f3f4f6;
+}
+
+.cartItems {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.emptyCartIcon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  color: #9ca3af;
+}
+
+.emptyCartText {
+  color: #6b7280;
+}
+
+.cartItemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.cartItemInfo {
+  flex: 1;
+}
+
+.toggleCartButton{
+  color:black;
+  background-color: #9a9898;
+  margin-left: 50%;
+  font-size: 1.25rem;
+
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  justify-self: center;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.toggleCartButton:hover{
+  background-color: #111827;
+  color:white;
+  transform: translateY(-20%);
+}
+
+.cartItemName {
+  font-weight: 500;
+  color: #111827;
+}
+
+.cartItemPrice {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.removeItem {
+  padding: 0.25rem;
+  border-radius: 9999px;
+  color: #ef4444;
+  transition: background-color 0.2s;
+}
+
+.removeItem:hover {
+  background-color: #fee2e2;
+}
+
+.cartFooter {
+  margin-top: 1.5rem;
+}
+
+.coinsSection {
+  background-color: #eff6ff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.coinsLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.coinsInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+}
